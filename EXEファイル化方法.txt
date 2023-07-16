@@ -1,0 +1,14 @@
+1. Venv環境を構築する。
+python -m venv venv
+
+2.venvを有効化
+/\venv\Scripts\Activate.ps1
+
+3.モジュールをインストール
+ pip install selenium
+ pip install bs4
+ pip install prettytable
+ pip install pyinstaller
+
+4.exeファイル化
+ pyinstaller.exe \LightFX_check_spread.py --onefile --icon=icon.ico

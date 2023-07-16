@@ -65,7 +65,7 @@ while True:
     leverage_rasio = re.sub(r"[^\d.]", "",line[0].text)
     ijiritsu = re.sub(r"[^\d.]", "",line[1].text)
     junshisan =re.sub(r"[^\d.]", "",line[2].text)
-    soneki = re.sub(r"[^\d.]", "",line[3].text)
+    soneki = re.sub(r"[^\d.-]", "",line[3].text)
 
 
     names =[];buy_prices = [];sell_prices=[];spreads=[];buy_swaps=[];sell_swaps=[]
@@ -86,7 +86,7 @@ while True:
     for i in show_data:
         table.add_row([names[i],buy_prices[i],sell_prices[i],spreads[i],buy_swaps[i],sell_swaps[i]])
     print(f"{today}  {now_time}")
-    print(table,f"\nレバレッジ:{leverage_rasio}   維持率:{ijiritsu} %\n\n\n")
+    print(table,f"\nレバレッジ:{leverage_rasio}   維持率:{ijiritsu}   損益:{soneki}\n\n\n")
     
     
     if loopcount ==1:
